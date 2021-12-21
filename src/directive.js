@@ -5,6 +5,7 @@ function doFix(dom, top) {
   dom.style.zIndex = '2001'
   dom.style.top = top + 'px'
   dom.parentNode.style.paddingTop = top + 'px'
+  dom.nextSibling.style.marginTop = dom.offsetHeight + 'px'
 }
 // 给固定头取消样式
 function removeFix(dom) {
@@ -12,6 +13,7 @@ function removeFix(dom) {
   dom.style.position = 'static'
   dom.style.top = '0'
   dom.style.zIndex = '0'
+  dom.nextSibling.style.marginTop = '0'
 }
 // 给固定头添加class
 function addClass(dom, fixtop) {
